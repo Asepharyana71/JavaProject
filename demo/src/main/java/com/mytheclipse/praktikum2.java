@@ -9,7 +9,7 @@ public class praktikum2
     b=3;
     c=6;
     d=a+b;
-    System.out.println(c);
-    System.out.println(d);
+    System.out.println("nilai c ="+ c);
+    System.out.println("nilai a + b = " + a +"+" + b +"="+ d);
     }
 }
