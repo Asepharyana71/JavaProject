@@ -1,20 +1,22 @@
 package com.modul4pbo;
 
 public class constructor {
-    String data, data2;
-    
-    public constructor(String data, String data2) {
-        this.data = data;
-        this.data2 = data2;
+    String brand;
+    String color;
+    int year;
+
+    public constructor(String brand, String color, int year) {
+        this.brand = brand;
+        this.color = color;
+        this.year = year;
     }
-    
-    void cetakConst() {
-        System.out.printf("%s %s", this.data, this.data2);
-        System.out.println(" ");
+
+    void printInfo() {
+        System.out.printf("Brand: %s, Color: %s, Year: %d%n", this.brand, this.color, this.year);
     }
-    
+
     public static void main(String[] args) {
-        constructor a = new constructor("rio", "fkom");
-        a.cetakConst();
+        constructor car = new constructor("Toyota", "Red", 2022);
+        car.printInfo();
     }
 }
