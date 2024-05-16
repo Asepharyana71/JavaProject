@@ -1,20 +1,49 @@
 package com.mytheclipse;
 
 public class bentuk {
-    public static int luas(int p, int l) {
-        return p * l;
+    public String getDataLuas(){
+        return "Data Luas Berbagau bentuk bangun datar :r";
     }
-    public static float luas(int alas , float t){
-        return (alas * t) / 2;
-    }
-    public static double luas (double phi, int jari){
-        return (phi*jari)*2;
-    }
+    
+    
     public static void main(String[] args) {
-        bentuk lingkaran = new bentuk();
-        System.out.println("Data Luas Berbagau bentuk bangun datar :");
-        System.out.println("Luas Persegi : " + bentuk.luas(3, 4));
-        System.out.println("Luas Segitiga : " + bentuk.luas(2, 4));
-        System.out.println("Luas Lingkaran : " + bentuk.luas(3.14, 5  ));
+        bentuk b = new bentuk();
+        persegi p = b.new persegi(4);
+        segitiga s = b.new segitiga(3, 4);
+        lingkaran l = b.new lingkaran(5);
+        System.out.println("Luas Persegi : " + p.luas());
+        System.out.println("Luas Segitiga : " + s.luas());
+        System.out.println("Luas Lingkaran : " + l.luas());
+        
+    }
+    
+    class persegi extends bentuk {
+        public int sisi;
+        public persegi(int s){
+            this.sisi = s;
+        }
+        public int luas(){
+            return sisi * sisi;
+        }
+    }
+    class segitiga extends bentuk {
+        public int alas;
+        public int tinggi;
+        public segitiga(int a, int t){
+            this.alas = a;
+            this.tinggi = t;
+        }
+        public int luas(){
+            return (alas * tinggi) / 2;
+        }
+    }
+    class lingkaran extends bentuk {
+        public int jari;
+        public lingkaran(int j){
+            this.jari = j;
+        }
+        public double luas(){
+            return 3.14 * jari * jari;
+        }
     }
 }
