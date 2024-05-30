@@ -4,7 +4,7 @@ package com.mytheclipse;
  * biodata
  */
 interface biodata {
-    String nama = "siti maesyaroh";
+    String nama = "Siti Maesyaroh";
     public void kerja();
     
 }
