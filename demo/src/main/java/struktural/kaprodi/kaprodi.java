@@ -7,5 +7,7 @@ public class kaprodi {
     public void santai() {
         System.out.println("2. menghentikan pelayanan kepada mahasiswa ketika saat jam istirahat");
     }
+    
+    //1 interface atribut method
 
 }
