@@ -20,7 +20,7 @@ class dosen implements biodata, NegaraDosen{
         System.out.println(nama+" sebagai dosen yang mengajar matakuliah PBO");
     }
     public void alamat() {
-        System.out.println(negara+" adalah negara tempat tinggal saya");
+        System.out.println(negara+" adalah negara tempat tinggalnya");
     }
     public static void main(String[] args) {
         dosen dsl = new dosen();
